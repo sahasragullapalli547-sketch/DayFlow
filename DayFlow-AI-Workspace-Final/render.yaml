@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: dayflow-ai-workspace
+    runtime: node
+    plan: starter
+    buildCommand: npm ci --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: dayflow-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: DB_PATH
+        value: /var/data/dayflow.db
+      - key: TRUST_PROXY
+        value: "true"
+      - key: APP_USERNAME
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
+      - key: LLM_PROVIDER
+        value: none
+      - key: LLM_TIMEOUT_MS
+        value: "30000"

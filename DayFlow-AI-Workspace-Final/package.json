@@ -1,0 +1,19 @@
+{
+  "name": "dayflow-ai-workspace",
+  "version": "2.0.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "test": "node --test server/test/*.test.js",
+    "cleanup:atlas": "node server/src/cleanup-atlas.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
