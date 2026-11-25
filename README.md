@@ -56,9 +56,7 @@ Install the tools required by your project's actual tech stack.
 
 5. Start the application using the run command documented for your project.
 
-## 🖥️ Demo
 
-Add your live demo URL here, if available.
 
 ## 🏆 Hackathon
 
@@ -70,10 +68,6 @@ Built for the **Build, Ship, Shape: Amazon Developer Hackathon**.
 - Adaptive scheduling when plans change.
 - Additional integrations with productivity tools and assistant platforms.
 
-## 👥 Contributors
 
-Add your team members here.
 
-## 📄 License
 
-Add your chosen open-source license here if you intend to distribute this project as open source.
